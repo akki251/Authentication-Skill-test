@@ -17,7 +17,6 @@ signupForm.addEventListener('submit', async (e) => {
     });
     if (res.data.status === 'success') {
       showAlert('Signup success', 'success');
-
       setTimeout(() => {
         location.assign('/signin');
       }, 3000);
