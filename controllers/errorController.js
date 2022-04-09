@@ -5,9 +5,9 @@ module.exports = (err, req, res, next) => {
   // for creating readable error
 
   // for password validation
-  // if (err.errors?.password) {
-  //   err.message = 'Password length must be atleast 8';
-  // }
+  if (err.errors && err.errors.password) {
+    err.message = 'Password length must be atleast 8';
+  }
 
   // for duplicate entries
   if (err.code === 11000) {
