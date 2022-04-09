@@ -67,7 +67,7 @@ resetForm.addEventListener('submit', async (e) => {
     });
 
     if (res.data.status === 'success') {
-      showAlert('Password reset successfull', 'success');
+      showAlert('Password reset successfully', 'success');
     } else {
       showAlert(res.data.message, 'error');
     }
