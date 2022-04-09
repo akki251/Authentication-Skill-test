@@ -1,17 +1,17 @@
-const app = require("./app");
+const app = require('./app');
 
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const Db = process.env.DATABASE_URL;
 
-// DATABASE connection string 
+// DATABASE connection string
 mongoose
   .connect(Db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log("DATABASE IS CONNECTED");
+    console.log('DATABASE IS CONNECTED');
   })
   .catch((err) => {
     console.log(err);

@@ -101,16 +101,11 @@ app.get('/logout', (req, res) => {
 });
 // app.use('/auth', authRoutes);
 
-app.get('/', (req, res) => {
-  res.send('home working');
-});
-
 // passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
-app.use('/api', backendRoutes);
-
 app.use('/', frontendRoutes);
+app.use('/api', backendRoutes);
 
 //  global error handler
 app.use(globalErrorHandler);
