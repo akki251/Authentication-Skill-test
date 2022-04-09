@@ -16,8 +16,7 @@ module.exports = sendMail = (mailId, link) => {
     from: 'akshansh773@gmail.com',
     to: mailId,
     subject: `Password reset Link for authentication`,
-    html: `<a>Here is the  password reset link : ${link} VALID UPTO ${newDate}</a>`,
-    // text: `Here is the  password reset link : ${link} VALID UPTO ${newDate}`,
+    text: `Here is the  password reset link : ${link} VALID UPTO 10 MINS`,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
