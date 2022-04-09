@@ -9,7 +9,7 @@ signupForm.addEventListener('submit', async (e) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'http://localhost:8000/api/signup',
+      url: '/api/signup',
       data: {
         email,
         password,
