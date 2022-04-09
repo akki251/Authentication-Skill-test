@@ -10,7 +10,7 @@ signinForm.addEventListener('submit', async (e) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'http://localhost:8000/api/signin',
+      url: '/api/signin',
       data: {
         email,
         password,
@@ -48,6 +48,6 @@ forgotForm.addEventListener('submit', async (e) => {
       );
     }
   } catch (error) {
-    showAlert(error.response.data.message , 'error');
+    showAlert(error.response.data.message, 'error');
   }
 });
