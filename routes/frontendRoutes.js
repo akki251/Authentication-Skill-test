@@ -69,7 +69,7 @@ router.route('/signin').get((req, res) => {
 });
 
 router.route('/forgotPassword').get((req, res) => {
-  res.render('forgotPassword', {
+  res.render('forgotpassword', {
     title: 'forgotPassword',
   });
 });

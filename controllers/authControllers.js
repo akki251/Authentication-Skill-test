@@ -223,7 +223,7 @@ exports.createNewPassword = catchAsync(async (req, res, next) => {
     );
   }
 
-  console.log(user);
+  // console.log(user);
   user.password = newPassword;
   await user.save();
 
