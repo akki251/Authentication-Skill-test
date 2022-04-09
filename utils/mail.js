@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 
 module.exports = sendMail = (mailId, link) => {
   let transporter = nodemailer.createTransport({
-    host: 'gmail',
+    service: 'gmail',
     host: 'smtp.gmail.com',
     auth: {
       user: process.env.EMAIL, // generated ethereal user
