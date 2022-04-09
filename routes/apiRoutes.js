@@ -14,7 +14,7 @@ router.route('/forgot-password').post(authControllers.forgotPassword);
 router
   .route('/forgot-password/:token')
   .get(authControllers.forgotPasswordToken, (req, res) => {
-    res.render('forgotPassword', {
+    res.render('forgotpassword', {
       title: 'forgot--Password',
     });
   });

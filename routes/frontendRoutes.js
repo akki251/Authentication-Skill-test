@@ -68,10 +68,4 @@ router.route('/signin').get((req, res) => {
   });
 });
 
-router.route('/forgotPassword').get((req, res) => {
-  res.render('forgotpassword', {
-    title: 'forgotPassword',
-  });
-});
-
 module.exports = router;
