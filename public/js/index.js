@@ -56,13 +56,22 @@ resetForm.addEventListener('submit', async (e) => {
   const email = document.querySelector('#email').value;
   const newPassword = document.querySelector('#change-password-current').value;
 
-  const res = await axios({
-    method: 'POST',
-    url: '/api/newpassword',
-    data: {
-      email,
-      newPassword,
-    },
-  });
-  console.log(res);
+  try {
+    const res = await axios({
+      method: 'POST',
+      url: '/api/newpassword',
+      data: {
+        email,
+        newPassword,
+      },
+    });
+
+    if (res.data.status === 'success') {
+      showAlert('Password reset successfull', 'success');
+    } else {
+      showAlert(res.data.message, 'error');
+    }
+  } catch (error) {
+    showAlert(error.response.data.message, 'error');
+  }
 });

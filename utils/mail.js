@@ -10,8 +10,7 @@ module.exports = sendMail = (mailId, link) => {
     },
   });
 
-  let newDate = new Date(Date.now() + 60 * 10 * 1000);
-  newDate = newDate.toTimeString() + newDate.toDateString();
+  let newDate = new Date(Date.now() + 60 * 10 * 1000).toString();
 
   var mailOptions = {
     from: 'akshansh773@gmail.com',
