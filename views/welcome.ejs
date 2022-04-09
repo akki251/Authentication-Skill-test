@@ -1,0 +1,29 @@
+<div class="container w-50 d-flex flex-column gap-3">
+  <h5 class="text-center">
+    <h2>Hi <%= google === true ? user?.displayName : user?.email %></h2>
+  </h5>
+
+  <% if( google === false) { %>
+  <div class="p-2" style="border-bottom: 2px solid rgb(202, 201, 201)">
+    Reset Password
+  </div>
+
+  <form class="form-group change-password d-flex flex-column gap-3">
+    <input
+      class="form-control"
+      type="password"
+      placeholder="current password"
+      id="change-password-current"
+      required
+    />
+    <input
+      type="password"
+      class="form-control"
+      placeholder="new password"
+      id="change-password-new"
+      required
+    />
+    <button class="btn btn-success" type="submit">Reset Password</button>
+  </form>
+  <%}%>
+</div>
