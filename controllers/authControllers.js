@@ -171,12 +171,12 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
   sendMail(
     user.email,
-    `http://localhost:8000/api/forgot-password/${resetToken}`
+    `https://authentication-test-skill.herokuapp.com/api/forgot-password/${resetToken}`
   );
 
   res.status(200).json({
     status: 'success',
-    url: `http://localhost:8000/api/forgot-password/${resetToken}`,
+    url: `https://authentication-test-skill.herokuapp.com/api/forgot-password/${resetToken}`,
   });
 });
 
