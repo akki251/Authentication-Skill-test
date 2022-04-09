@@ -13,8 +13,6 @@ const frontendRoutes = require('./routes/frontendRoutes');
 const passport = require('passport');
 const cors = require('cors');
 
-
-
 // require('./controllers/passport');
 
 const express = require('express');
@@ -102,6 +100,10 @@ app.get('/logout', (req, res) => {
   res.redirect('/');
 });
 // app.use('/auth', authRoutes);
+
+app.get('/', (req, res) => {
+  res.send('home working');
+});
 
 // passport middleware
 app.use(passport.initialize());
